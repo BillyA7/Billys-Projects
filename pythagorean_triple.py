@@ -15,30 +15,25 @@ Loop the program so the user can use it more than once without having to restart
 
 import sys
 
-
-def pythagorean_triple():
-    while True:
-        try:
-            nums = list(
-                map(int, input('Please enter 3 whole positive numbers seperated by spaces.\n\nOr press enter to quit\n>').split()))
-        except ValueError:
-            print('Incorrect input, please try again.\n')
+while True:
+    try:
+        nums = list(
+            map(int, input('Please enter 3 whole positive numbers seperated by spaces.\n\nOr press enter to quit\n>').split()))
+    except ValueError:
+        print('Incorrect input, please try again.\n')
+        continue
+    if len(nums) in range(1, 3):
+        print('Incorrect input, please try again.\n')
+        continue
+    elif not len(nums):
+        print('Goodbye')
+        sys.exit()
+    else:
+        nums.sort()
+        a, b, c = [x**2 for x in nums]
+        if a + b != c:
+            print('Not a Pythagorean Triple')
             continue
-        if len(nums) in range(1, 3):
-            print('Incorrect input, please try again.\n')
-            continue
-        elif len(nums) == 0:
-            print('Goodbye')
-            sys.exit(0)
         else:
-            nums.sort()
-            a, b, c = [x**2 for x in nums]
-            if a + b != c:
-                print('Not a Pythagorean Triple')
-                pythagorean_triple()
-            else:
-                print('Woohoo a Pythagorean Triple')
-                pythagorean_triple()
-
-
-pythagorean_triple()
+            print('Woohoo a Pythagorean Triple')
+            continue
