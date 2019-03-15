@@ -36,14 +36,16 @@ class Rocket:
         for i in reversed(range(1, 11)):
             print(i)
             time.sleep(1)
-        print(f'We have lift off for {rocket}!')
+        print(f'We have lift off for the {rocket}!')
 
     # landing sequence
     def land_rocket(self):
         print('Initiating landing manoeuvre.')
-        for i in range(5):
+        count = 5
+        while count > 0:
             print('Descending...')
             time.sleep(1)
+            count -= 1
         self.x = 0
         self.y = 0
         print('Landing completed successfully!')
