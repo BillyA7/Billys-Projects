@@ -62,6 +62,3 @@ total_value = [float(
 print(penny_total, nickel_total, dime_total, quarter_total)
 print(penny_wrapper, nickel_wrapper, dime_wrapper, quarter_wrapper)
 print(round(sum(total_value)))
-
-
-# test
