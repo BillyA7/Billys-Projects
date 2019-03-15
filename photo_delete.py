@@ -1,4 +1,4 @@
-'''Proogram to delete converted pdd files from specified folder.'''
+'''Program to delete converted pdd files from specified folder.'''
 
 import os
 import sys
