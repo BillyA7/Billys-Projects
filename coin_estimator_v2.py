@@ -49,22 +49,22 @@ class Coin:
 
 class Penny(Coin):
     def __init__(self):
-        Coin.__init__(self, 2.5, 0.01, 50)
+        super().__init__(2.5, 0.01, 50)
 
 
 class Nickel(Coin):
     def __init__(self):
-        Coin.__init__(self, 5.0, 0.05, 40)
+        super().__init__(5.0, 0.05, 40)
 
 
 class Dime(Coin):
     def __init__(self):
-        Coin.__init__(self, 2.268, 0.1, 50)
+        super().__init__(2.268, 0.1, 50)
 
 
 class Quarter(Coin):
     def __init__(self):
-        Coin.__init__(self, 5.67, 0.25, 40)
+        super().__init__(5.67, 0.25, 40)
 
 
 print('- - - - - - - - - - - - - - - - - - ')
